@@ -29,7 +29,8 @@ Listar las políticas *inline* de un usuario
 aws iam list-user-policies --user-name <user>
 ```
 
-#Grupo
+# Grupo
+
 Listar los grupos
 ```
 aws iam list-groups
