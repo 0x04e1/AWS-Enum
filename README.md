@@ -87,27 +87,27 @@ Obtener el contenido de una política en línea específica
 aws iam get-role-policy --role-name <role-name> --policy-name <policy-name>
 ```
 # Políticas
-Listar las políticas :
+Listar las políticas
 ```
 aws iam list-policies
 ```
 Detalle de una política
 ```
-aws iam get-policy --policy-arn policy-arn
+aws iam get-policy --policy-arn <policy-arn>
 ```
 Detalle sobre las versiones de una política
 ```
-aws iam list-policy-versions --policy-arn policy-arn
+aws iam list-policy-versions --policy-arn <policy-arn>
 ```
 Detalle sobre la versión de una política administrada
 ```
-aws iam get-policy-version --policy-arn policy-arn --version-id version-id
+aws iam get-policy-version --policy-arn <policy-arn> --version-id <version-id>
 ```
 Detalle de una política en línea aplicada sobre usuario, grupo o rol:
 ```
-aws iam get-user-policy --user-name user-name --policy-name policy-name
-aws iam get-group-policy --group-name group-name --policy-name policy-name
-aws iam get-role-policy --role-name role-name --policy-name policy-name
+aws iam get-user-policy --user-name <user-name> --policy-name <policy-name>
+aws iam get-group-policy --group-name <group-name> --policy-name <policy-name>
+aws iam get-role-policy --role-name <role-name> --policy-name <policy-name>
 ```
 Listar las políticas administradas (attached policies) asociadas a un usuario, grupo o rol
 ```
