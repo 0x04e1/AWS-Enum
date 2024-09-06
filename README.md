@@ -459,7 +459,7 @@ aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,Mast
 
 # Secret Manager
 
-Listar todos los secretos en AWS Secrets Manager
+Listar todos los secretos en *Secrets Manager*
 ```
 aws secretsmanager list-secrets
 ```
