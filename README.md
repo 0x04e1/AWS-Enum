@@ -196,3 +196,68 @@ aws lambda get-layer-version --layer-name <LayerName> --version-number <VersionN
 ```
 
 # API Gateway
+
+Listar todas las APIs REST
+```
+aws apigateway get-rest-apis
+```
+Obtener información sobre una API REST específica
+```
+aws apigateway get-rest-api --rest-api-id <ApiId>
+```
+Listar todos los recursos de una API REST
+```
+aws apigateway get-resources --rest-api-id <ApiId>
+```
+Obtener información sobre un recurso específico
+```
+aws apigateway get-resource --rest-api-id <ApiId> --resource-id <ResourceID>
+```
+Obtener información sobre el método de un recurso
+```
+aws apigateway get-method --rest-api-id <ApiId> --resource-id <ResourceID> --http-method <Method>
+```
+Listar todas las etapas para una API REST
+```
+aws apigateway get-stages --rest-api-id <ApiId>
+```
+Obtener información sobre una etapa específica de una API REST
+```
+aws apigateway get-stage --rest-api-id <ApiId> --stage-name <StageName>
+```
+Listar todas las claves de API
+```
+aws apigateway get-api-keys --include-values
+```
+Obtener información sobre una clave de API específica
+```
+aws apigateway get-api-key --api-key <ApiKey>
+```
+Listar las políticas de autorización
+```
+aws apigateway get-authorizers --rest-api-id <ApiId>
+```
+Obtener información sobre un autorizador específico
+```
+aws apigateway get-authorizer --rest-api-id <ApiId> --authorizer-id <AuthorizerId>
+```
+Obtener la configuración del endpoint
+```
+aws apigateway get-rest-api --rest-api-id <ApiId>
+```
+Listar las configuraciones de despliegue de API
+```
+aws apigateway get-deployments --rest-api-id <ApiId>
+```
+Obtener información sobre una implementación específica
+```
+aws apigateway get-deployment --rest-api-id <ApiId> --deployment-id <DeploymentId>
+```
+Listar las configuraciones de documentación de una API
+```
+aws apigateway get-documentation-parts --rest-api-id <ApiId>
+```
+Obtener información sobre una parte de documentación específica
+```
+aws apigateway get-documentation-part --rest-api-id <ApiId> --documentation-part-id <PartId>
+```
