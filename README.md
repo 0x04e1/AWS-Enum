@@ -355,53 +355,107 @@ aws s3api list-buckets
 ```
 Obtener la configuración de ACLs de un *bucket* específico
 ```
-aws s3api get-bucket-acl --bucket bucket-name
+aws s3api get-bucket-acl --bucket <bucket-name>
 ```
 Obtener la política de un *bucket* específico
 ```
-aws s3api get-bucket-policy --bucket bucket-name
+aws s3api get-bucket-policy --bucket <bucket-name>
 ```
 Revisar la configuración de bloque de acceso público de un bucket
 ```
-aws s3api get-public-access-block --bucket bucket-name
+aws s3api get-public-access-block --bucket <bucket-name>
 ```
 Obtener la configuración de versionado de un *bucket*
 ```
-aws s3api get-bucket-versioning --bucket bucket-name
+aws s3api get-bucket-versioning --bucket <bucket-name>
 ```
 Obtener la configuración de replicación de un *bucket*
 ```
-aws s3api get-bucket-replication --bucket bucket-name
+aws s3api get-bucket-replication --bucket <bucket-name>
 ```
 Listar todos los objetos en un *bucket* específico
 ```
-aws s3api list-objects --bucket bucket-name
+aws s3api list-objects --bucket <bucket-name>
 ```
 Obtener la configuración de ACLs de un objeto específico
 ```
-aws s3api get-object-acl --bucket bucket-name --key object-name
+aws s3api get-object-acl --bucket <bucket-name> --key <object-name>
 ```
 Obtener la configuración de CORS para un *bucket* específico
 ```
-aws s3api get-bucket-cors --bucket bucket-name
+aws s3api get-bucket-cors --bucket <bucket-name>
 ```
 Obtener la configuración de encriptación para un *bucket* específico
 ```
-aws s3api get-bucket-encryption --bucket bucket-name
+aws s3api get-bucket-encryption --bucket <bucket-name>
 ```
 Obtener la configuración de *logging* de acceso de un *bucket*
 ```
-aws s3api get-bucket-logging --bucket bucket-name
+aws s3api get-bucket-logging --bucket <bucket-name>
 ```
 Obtener la configuración de bloqueo de objetos
 ```
-aws s3api get-object-lock-configuration --bucket bucket-name
+aws s3api get-object-lock-configuration --bucket <bucket-name>
 ```
 Revisar la Configuración de Políticas de *bucket* en VPC
 ```
-aws s3api get-bucket-policy-status --bucket bucket-name
+aws s3api get-bucket-policy-status --bucket <bucket-name>
 ```
 
+# RDS
+
+Obtener información sobre los clústeres de RDS
+```
+aws rds describe-db-clusters
+```
+Obtener información sobre las instancias de base de datos
+```
+aws rds describe-db-instances
+```
+Obtener información sobre los grupos de subredes de RDS
+```
+aws rds describe-db-subnet-groups
+```
+Obtener información sobre los grupos de seguridad de RDS
+```
+aws rds describe-db-security-groups
+```
+Obtener información sobre los proxies de RDS
+```
+aws rds describe-db-proxies
+```
+Obtener información sobre las copias de seguridad automáticas de las instancias de RDS
+```
+aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,BackupRetentionPeriod]"
+```
+Listar snapshots de bases de datos
+```
+aws rds describe-db-snapshots
+```
+Obtener la configuración de logs para una instancia de base de datos
+```
+aws rds describe-db-log-files --db-instance-identifier <instance-id>
+```
+Obtener información sobre los grupos de parámetros de RDS
+```
+aws rds describe-db-parameter-groups
+```
+Describir un grupo de parámetros específico
+```
+aws rds describe-db-parameters --db-parameter-group-name <parameter-group-name>
+```
+Obtener información sobre las claves KMS utilizadas para cifrar tus instancias de RDS
+```
+aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,StorageEncrypted,KmsKeyId]"
+```
+Obtener información sobre las configuraciones de VPC asociadas a tus instancias de RDS
+```
+aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,VpcSecurityGroups]"
+```
+Obtener detalles sobre la configuración de autenticación de la base de datos
+```
+aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,MasterUsername]"
+```
 
 
 
