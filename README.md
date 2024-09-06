@@ -320,3 +320,89 @@ Obtener los detalles de una definición de tarea específica
 ```
 aws ecs describe-task-definition --task-definition <TaskDefinitionArn>
 ```
+### EKS
+
+Listar todos los clústeres EKS
+```
+aws eks list-clusters
+```
+Obtener detalles de un clúster específico
+```
+aws eks describe-cluster --name Cluster-Name
+```
+Listar todos los node groups en un clúster específico
+```
+aws eks list-nodegroups --cluster-name Cluster-Name
+```
+Describir un node group específico
+```
+aws eks describe-nodegroup --cluster-name Cluster-Name --nodegroup-name Node-Group
+```
+Listar todos los perfiles de *Fargate* en un clúster específico
+```
+aws eks list-fargate-profiles --cluster-name Cluster-Name
+```
+Describir un perfil de Fargate específico
+```
+aws eks describe-fargate-profile --cluster-name Cluster-Name --fargate-profile-name Profile-Name
+```
+
+# S3
+
+Listar todos los *buckets* en la cuenta
+```
+aws s3api list-buckets
+```
+Obtener la configuración de ACLs de un *bucket* específico
+```
+aws s3api get-bucket-acl --bucket bucket-name
+```
+Obtener la política de un *bucket* específico
+```
+aws s3api get-bucket-policy --bucket bucket-name
+```
+Revisar la configuración de bloque de acceso público de un bucket
+```
+aws s3api get-public-access-block --bucket bucket-name
+```
+Obtener la configuración de versionado de un *bucket*
+```
+aws s3api get-bucket-versioning --bucket bucket-name
+```
+Obtener la configuración de replicación de un *bucket*
+```
+aws s3api get-bucket-replication --bucket bucket-name
+```
+Listar todos los objetos en un *bucket* específico
+```
+aws s3api list-objects --bucket bucket-name
+```
+Obtener la configuración de ACLs de un objeto específico
+```
+aws s3api get-object-acl --bucket bucket-name --key object-name
+```
+Obtener la configuración de CORS para un *bucket* específico
+```
+aws s3api get-bucket-cors --bucket bucket-name
+```
+Obtener la configuración de encriptación para un *bucket* específico
+```
+aws s3api get-bucket-encryption --bucket bucket-name
+```
+Obtener la configuración de *logging* de acceso de un *bucket*
+```
+aws s3api get-bucket-logging --bucket bucket-name
+```
+Obtener la configuración de bloqueo de objetos
+```
+aws s3api get-object-lock-configuration --bucket bucket-name
+```
+Revisar la Configuración de Políticas de *bucket* en VPC
+```
+aws s3api get-bucket-policy-status --bucket bucket-name
+```
+
+
+
+
+ 
