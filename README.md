@@ -457,6 +457,46 @@ Obtener detalles sobre la configuración de autenticación de la base de datos
 aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,MasterUsername]"
 ```
 
+# Secret Manager
 
-
- 
+Listar todos los secretos en AWS Secrets Manager
+```
+aws secretsmanager list-secrets
+```
+Obtener información detallada sobre un secreto específico
+```
+aws secretsmanager describe-secret --secret-id <SecretName>
+```
+Obtener la política de recursos asociada a un secreto específico
+```
+aws secretsmanager get-resource-policy --secret-id <SecretID>
+```
+Obtener el valor de un secreto específico (cuidado con la exposición de datos sensibles)
+```
+aws secretsmanager get-secret-value --secret-id <SecretName>
+```
+Listar las versiones de un secreto específico
+```
+aws secretsmanager list-secret-version-ids --secret-id <SecretID>
+```
+Describir una versión específica de un secreto
+```
+aws secretsmanager describe-secret --secret-id <SecretID> --version-id <VersionID>
+```
+Obtener la configuración de rotación de un secreto específico
+```
+aws secretsmanager describe-secret --secret-id <SecretID>
+```
+Obtener las políticas de acceso de un secreto (ya cubierto por get-resource-policy)
+```
+aws secretsmanager get-resource-policy --secret-id <SecretID>
+```
+Listar las etiquetas asociadas a un secreto específico
+```
+aws secretsmanager list-secret-tags --secret-id <SecretID>
+```
+Agregar o eliminar etiquetas de un secreto
+```
+aws secretsmanager tag-resource --secret-id <SecretID> --tags Key=tag-key,Value=tag-value
+aws secretsmanager untage-resource --secret-id <SecretID> --tag-keys tag-key
+```
