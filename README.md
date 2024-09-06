@@ -115,3 +115,44 @@ aws iam list-attached-user-policies --user-name <user-name>
 aws iam list-attached-group-policies --group-name <group-name>
 aws iam list-attached-role-policies --role-name <role-name>
 ```
+# EC2
+Información relacionada con las instancias EC2
+```
+aws ec2 describe-instances
+```
+Detalle de inforamción de una instancia específica
+```
+aws ec2 describe-instances --instance-ids instance-id
+```
+Información realacionada con el *user*-*data*
+```
+aws ec2 describe-instance-attribute –attribute userData --instance-id <instance-id>
+```
+Inforamción relacionada con roles asociados a las instancias
+```
+aws ec2 describe-iam-instance-profile-associations
+```
+Información de la configuración de red
+```
+aws ec2 describe-instances --instance-ids <instance-id> --query 'Reservations[*].Instances[*].[InstanceId, PublicIpAddress, PrivateIpAddress]'
+```
+Inforamción de los *Tags* de la instancia
+```
+aws ec2 describe-tags --filters "Name=resource-id,Values=<instance-id>"
+```
+Para verificar los volúmenes de EBS asociados con las instancias
+```
+aws ec2 describe-volumes
+```
+Para obtener información sobre los grupos de seguridad
+```
+aws ec2 describe-security-groups
+```
+Para detalles específicos sobre un grupo de seguridad
+```
+aws ec2 describe-security-groups --group-ids <security-group-id>
+```
+Para obtener información sobre las reglas de entrada y salida de un grupo de seguridad específico
+```
+aws ec2 describe-security-groups --group-ids <security-group-id>
+```
