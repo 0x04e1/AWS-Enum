@@ -257,3 +257,66 @@ Obtener información sobre una parte de documentación específica
 ```
 aws apigateway get-documentation-part --rest-api-id <ApiId> --documentation-part-id <PartId>
 ```
+## Container
+
+# ECR
+Describir todos los repositorios en el contenedor registro (ECR)
+```
+aws ecr describe-repositories
+```
+Obtener la política de repositorio
+```
+aws ecr get-repository-policy --repository-name <RepositoryName>
+```
+Listar todas las imágenes en un repositorio específico
+```
+aws ecr list-images --repository-name <RepositoryName>
+```
+Describir la información sobre una imagen de contenedor
+```
+aws ecr describe-images --repository-name <RepositoryName> --image-ids imageTag=<ImageTag>
+```
+Listar todos los clusters ECS
+```
+aws ecs list-clusters
+```
+Describir la información sobre un cluster ECS específico
+```
+aws ecs describe-clusters --clusters <ClusterName>
+```
+Listar todos los servicios en un cluster ECS específico
+```
+aws ecs list-services --cluster <ClusterName>
+```
+Describir la información sobre un servicio ECS específico
+```
+aws ecs describe-services --cluster <ClusterName> --services <ServiceName>
+```
+Listar todas las tareas en un cluster ECS específico
+```
+aws ecs list-tasks --cluster <ClusterName>
+```
+Describir la información sobre una tarea ECS específica
+```
+aws ecs describe-tasks --cluster <ClusterName> --tasks <TaskArn>
+```
+Listar todos los contenedores en un cluster ECS específico
+```
+aws ecs list-container-instances --cluster <ClusterName>
+```
+Describir la configuración de la instancia de contenedor
+```
+aws ecs describe-container-instances --cluster <ClusterName> --container-instances <ContainerInstanceArn>
+```
+Describir la definición de tarea
+```
+aws ecs describe-task-definition --task-definition <TaskDefinitionArn>
+```
+Listar las definiciones de tarea
+```
+aws ecs list-task-definitions
+```
+Obtener los detalles de una definición de tarea específica
+```
+aws ecs describe-task-definition --task-definition <TaskDefinitionArn>
+```
