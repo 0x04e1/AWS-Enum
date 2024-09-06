@@ -109,3 +109,9 @@ aws iam get-user-policy --user-name user-name --policy-name policy-name
 aws iam get-group-policy --group-name group-name --policy-name policy-name
 aws iam get-role-policy --role-name role-name --policy-name policy-name
 ```
+Listar las políticas administradas (attached policies) asociadas a un usuario, grupo o rol
+```
+aws iam list-attached-user-policies --user-name <user-name>
+aws iam list-attached-group-policies --group-name <group-name>
+aws iam list-attached-role-policies --role-name <role-name>
+```
