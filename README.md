@@ -241,10 +241,6 @@ Obtener información sobre un autorizador específico
 ```
 aws apigateway get-authorizer --rest-api-id <ApiId> --authorizer-id <AuthorizerId>
 ```
-Obtener la configuración del endpoint
-```
-aws apigateway get-rest-api --rest-api-id <ApiId>
-```
 Listar las configuraciones de despliegue de API
 ```
 aws apigateway get-deployments --rest-api-id <ApiId>
