@@ -156,3 +156,43 @@ Para obtener información sobre las reglas de entrada y salida de un grupo de se
 ```
 aws ec2 describe-security-groups --group-ids <security-group-id>
 ```
+# Lambda
+
+Listar las funciones Lambdas
+```
+aws lambda list-functions
+```
+Obtener la configuración de la función Lambda 
+```
+aws lambda get-function-configuration --function-name <function-name>
+```
+Listar versiones de una función Lambda
+```
+aws lambda list-versions-by-function --function-name <function-name>
+```
+Recuperar información sobre una función lambda
+```
+aws lambda get-function --function-name <function-name>
+```
+Listar alias de una función Lambda
+```
+aws lambda list-aliases --function-name <function-name>
+```
+Listar capas (layers) asociadas a una función Lambda
+```
+aws lambda get-function-configuration --function-name <function-name>
+```
+Recuperar información de la política sobre una función lambda
+```
+aws lambda get-policy --function-name <function-name>
+```
+Recuperar información de mapeo de la fuente del evento sobre la función lambda especificada
+```
+aws lambda list-event-source-mappings --function-name <function-name>
+```
+Obtener detalles sobre una versión específica de una capa (*layer*) de una función Lambda
+```
+aws lambda get-layer-version --layer-name <LayerName> --version-number <VersionNumber>
+```
+
+# API Gateway
