@@ -13,7 +13,7 @@
   - [EKS](#EKS)
 - [S3](#S3)
 - [RDS](#RDS)
-- [Secret Manager](#Secrets-Manager)
+- [Secrets Manager](#Secrets-Manager)
 ### IAM
 
 ¿Quién soy?
