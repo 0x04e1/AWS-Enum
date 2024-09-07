@@ -150,7 +150,9 @@ aws ec2 describe-iam-instance-profile-associations
 ```
 Información de la configuración de red
 ```
-aws ec2 describe-instances --instance-ids <instance-id> --query 'Reservations[*].Instances[*].[InstanceId, PublicIpAddress, PrivateIpAddress]'
+aws ec2 describe-instances \
+  --instance-ids <instance-id> \
+  --query 'Reservations[*].Instances[*].[InstanceId, PublicIpAddress, PrivateIpAddress]'
 ```
 Inforamción de los *Tags* de la instancia
 ```
