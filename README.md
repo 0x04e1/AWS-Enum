@@ -165,11 +165,16 @@ Para verificar los volúmenes de EBS asociados con las instancias
 ```
 aws ec2 describe-volumes
 ```
-Para obtener información sobre los grupos de seguridad
+### Security Groups
+Obtén una lista de todos los grupos de seguridad
 ```
 aws ec2 describe-security-groups
 ```
-Para detalles específicos sobre un grupo de seguridad
+Obtener información sobre los grupos de seguridad
+```
+aws ec2 describe-security-groups
+```
+Listar detalles específicos sobre un grupo de seguridad
 ```
 aws ec2 describe-security-groups --group-ids <security-group-id>
 ```
@@ -177,10 +182,13 @@ Para obtener información sobre las reglas de entrada y salida de un grupo de se
 ```
 aws ec2 describe-security-groups --group-ids <security-group-id>
 ```
-### Security Groups
-Obtén una lista de todos los SG
+Listar los grupos de seguridad asociados con un *Load Balancer*
 ```
-aws ec2 describe-security-groups
+aws elb describe-load-balancers --query 'LoadBalancerDescriptions[*].SecurityGroups' --output text
+```
+Listar Reglas de Seguridad de Red
+```
+aws ec2 describe-network-acls --query 'NetworkAcls[*].Entries'
 ```
 ### Lambda
 
