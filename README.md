@@ -1,4 +1,27 @@
-# Usuario
+## IAM
+- [Grupo](#grupo)
+- [Rol](#rol)
+- [Políticas](#políticas)
+
+## EC2
+
+## Lambda
+
+## API Gateway
+
+## Container
+- [ECR](#ecr)
+- [ECS](#ecs)
+- [EKS](#eks)
+
+## S3
+
+## RDS
+
+## Secrets Manager
+
+
+# IAM
 
 ¿Quién soy?
 ```
@@ -29,7 +52,7 @@ Listar las políticas *inline* de un usuario
 aws iam list-user-policies --user-name <user>
 ```
 
-# Grupo
+### Grupo
 
 Listar los grupos
 ```
@@ -56,7 +79,7 @@ Obtener detalles de un grupo específico
 aws iam get-group --group-name <group>
 ```
 
-# Rol
+### Rol
 
 Listar los roles
 ```
@@ -86,7 +109,7 @@ Obtener el contenido de una política en línea específica
 ```
 aws iam get-role-policy --role-name <role-name> --policy-name <policy-name>
 ```
-# Políticas
+### Políticas
 Listar las políticas
 ```
 aws iam list-policies
@@ -458,7 +481,7 @@ Obtener detalles sobre la configuración de autenticación de la base de datos
 aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,MasterUsername]"
 ```
 
-# Secret Manager
+# Secrets Manager
 
 Listar todos los secretos en *Secrets Manager*
 ```
