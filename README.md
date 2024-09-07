@@ -276,6 +276,7 @@ Describir la información sobre una imagen de contenedor
 ```
 aws ecr describe-images --repository-name <RepositoryName> --image-ids imageTag=<ImageTag>
 ```
+### ECS
 Listar todos los clusters ECS
 ```
 aws ecs list-clusters
