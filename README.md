@@ -5,6 +5,7 @@
   - [Rol](#Rol)
   - [Políticas](#Políticas)
 - [EC2](#EC2)
+  - [Security Groups](#Security-Groups)
 - [Lambda](#Lambda)
 - [API Gateway](#API-Gateway)
 - [Container](#Container)
@@ -133,7 +134,7 @@ aws iam list-attached-user-policies --user-name <user-name>
 aws iam list-attached-group-policies --group-name <group-name>
 aws iam list-attached-role-policies --role-name <role-name>
 ```
-### EC2
+## EC2
 Información relacionada con las instancias EC2
 ```
 aws ec2 describe-instances
@@ -175,6 +176,11 @@ aws ec2 describe-security-groups --group-ids <security-group-id>
 Para obtener información sobre las reglas de entrada y salida de un grupo de seguridad específico
 ```
 aws ec2 describe-security-groups --group-ids <security-group-id>
+```
+### Security Groups
+Obtén una lista de todos los SG
+```
+aws ec2 describe-security-groups
 ```
 ### Lambda
 
