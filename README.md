@@ -2,7 +2,16 @@
   - [Grupo](#Grupo)
   - [Rol](#Rol)
   - [Políticas](#Políticas)
-
+- [EC2](#EC2)
+- [Lambda](#Lambda)
+- [API Gateway](#API-Gateway)
+- [Container](#Container)
+  - [ECR](#ECR)
+  - [ECS](#ECS)
+  - [EKS](#EKS)
+- [S3](#S3)
+- [RDS](#RDS)
+- [Secret Manager](#Secrets-Manager)
 ### IAM
 
 ¿Quién soy?
