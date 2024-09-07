@@ -138,7 +138,7 @@ aws iam list-attached-user-policies --user-name <user-name>
 aws iam list-attached-group-policies --group-name <group-name>
 aws iam list-attached-role-policies --role-name <role-name>
 ```
-# EC2
+### EC2
 Información relacionada con las instancias EC2
 ```
 aws ec2 describe-instances
@@ -179,7 +179,7 @@ Para obtener información sobre las reglas de entrada y salida de un grupo de se
 ```
 aws ec2 describe-security-groups --group-ids <security-group-id>
 ```
-# Lambda
+### Lambda
 
 Listar las funciones Lambdas
 ```
@@ -218,7 +218,7 @@ Obtener detalles sobre una versión específica de una capa (*layer*) de una fun
 aws lambda get-layer-version --layer-name <LayerName> --version-number <VersionNumber>
 ```
 
-# API Gateway
+### API Gateway
 
 Listar todas las APIs REST
 ```
@@ -371,7 +371,7 @@ Describir un perfil de Fargate específico
 aws eks describe-fargate-profile --cluster-name <Cluster-Name> --fargate-profile-name <Profile-Name>
 ```
 
-# S3
+### S3
 
 Listar todos los *buckets* en la cuenta
 ```
@@ -426,7 +426,7 @@ Revisar la Configuración de Políticas de *bucket* en VPC
 aws s3api get-bucket-policy-status --bucket <bucket-name>
 ```
 
-# RDS
+### RDS
 
 Obtener información sobre los clústeres de RDS
 ```
@@ -481,7 +481,7 @@ Obtener detalles sobre la configuración de autenticación de la base de datos
 aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier,MasterUsername]"
 ```
 
-# Secrets Manager
+### Secrets Manager
 
 Listar todos los secretos en *Secrets Manager*
 ```
