@@ -1,26 +1,3 @@
-## IAM
-- [Grupo](#grupo)
-- [Rol](#rol)
-- [Políticas](#políticas)
-
-## EC2
-
-## Lambda
-
-## API Gateway
-
-## Container
-- [ECR](#ecr)
-- [ECS](#ecs)
-- [EKS](#eks)
-
-## S3
-
-## RDS
-
-## Secrets Manager
-
-
 # IAM
 
 ¿Quién soy?
