@@ -328,23 +328,23 @@ aws eks list-clusters
 ```
 Obtener detalles de un clúster específico
 ```
-aws eks describe-cluster --name Cluster-Name
+aws eks describe-cluster --name <Cluster-Name>
 ```
 Listar todos los node groups en un clúster específico
 ```
-aws eks list-nodegroups --cluster-name Cluster-Name
+aws eks list-nodegroups --cluster-name <Cluster-Name>
 ```
 Describir un node group específico
 ```
-aws eks describe-nodegroup --cluster-name Cluster-Name --nodegroup-name Node-Group
+aws eks describe-nodegroup --cluster-name <Cluster-Name> --nodegroup-name <Node-Group>
 ```
 Listar todos los perfiles de *Fargate* en un clúster específico
 ```
-aws eks list-fargate-profiles --cluster-name Cluster-Name
+aws eks list-fargate-profiles --cluster-name <Cluster-Name>
 ```
 Describir un perfil de Fargate específico
 ```
-aws eks describe-fargate-profile --cluster-name Cluster-Name --fargate-profile-name Profile-Name
+aws eks describe-fargate-profile --cluster-name <Cluster-Name> --fargate-profile-name <Profile-Name>
 ```
 
 # S3
