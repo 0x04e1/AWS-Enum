@@ -14,6 +14,8 @@
 - [S3](#S3)
 - [RDS](#RDS)
 - [Secrets Manager](#Secrets-Manager)
+- [KMS](#MKS)
+
 ### IAM
 
 ¿Quién soy?
@@ -518,4 +520,53 @@ Agregar o eliminar etiquetas de un secreto
 ```
 aws secretsmanager tag-resource --secret-id <SecretID> --tags Key=tag-key,Value=tag-value
 aws secretsmanager untage-resource --secret-id <SecretID> --tag-keys tag-key
+```
+### KMS
+Listar claves
+```
+aws kms list-keys
+```
+Listar detalles específicos sobre una clave en particular, incluyendo su estado y la política asociada
+```
+aws kms describe-key --key-id <key-id>
+```
+Revisa la política de una clave específica para verificar los permisos.
+```
+aws kms get-key-policy --key-id <key-id> --policy-name default
+```
+Listar todos los alias de claves
+```
+aws kms list-aliases
+```
+Listar detalles sobre un alias específico
+```
+aws kms describe-alias --alias-name <alias-name>
+```
+Verifica si la rotación automática de claves está habilitada para una clave específica.
+```
+aws kms get-key-rotation-status --key-id <key-id>
+```
+Obtén un resumen de todas las claves en tu cuenta.
+```
+aws kms list-keys --output table
+```
+Verifica los permisos asociados a una clave, incluyendo los permisos de IAM que están en la política de la clave
+```
+aws kms list-grants --key-id <key-id>
+```
+Listar las políticas y grants para todas las claves
+```
+aws kms list-grants --key-id <key-id> --output table
+```
+Obtener detalles sobre el estado de la clave
+```
+aws kms describe-key --key-id <key-id> --query 'KeyMetadata.KeyState'
+```
+Información sobre las claves en uso en los servicios de AWS, como en EBS, S3, etc.
+```
+aws kms list-aliases --query 'Aliases[*].[AliasName, TargetKeyId]'
+```
+Detalle de las políticas de acceso y permisos asociados a las clave
+```
+aws kms list-grants --key-id <key-id>
 ```
